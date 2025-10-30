@@ -12,7 +12,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Overview - Web of Trust – Bitscrafter</title>
   <meta name="description" content="
-Patent Pending Problem Statement Contextual data to deliver personalized experiences constitutes an essential need of modern digital ecosystems that increasingly rely on autonomous software entities—including AI agents, applications, and services. This data is often sensitive and belongs to specific entities (persons, organizations). However, enabling these autonomous entities to access such data at scale, in a secure manner and while preserving privacy, presents fundamental challenges that existing industry standards fail to adequately address." /><link rel="canonical" href="https://bitscrafter.com/products/overview_web_of_trust/" itemprop="url" />
+Patent Pending Problem Statement Contextual data to deliver personalized experiences constitutes an essential need of modern digital ecosystems that increasingly rely on autonomous software entities—including AI agents, applications, and services. This data is often sensitive and owned by individuals or organizations. However, enabling these autonomous entities to access such data dynamically at scale, in a secure manner, and while preserving privacy and transparency across multi-entity operations, presents fundamental challenges that existing industry standards fail to adequately address." /><link rel="canonical" href="https://bitscrafter.com/products/overview_web_of_trust/" itemprop="url" />
 
 <meta property="og:title" content="Overview - Web of Trust" />
 <meta property="og:description" content="
@@ -24,20 +24,20 @@ Patent Pending Problem Statement Contextual data to deliver personalized experie
 Problem Statement
     Contextual data to deliver personalized experiences constitutes an essential need of modern digital ecosystems that
 increasingly rely on autonomous software entities—including AI agents, applications, and services. This data is often
-sensitive and belongs to specific entities (persons, organizations). However, enabling these autonomous entities to
-access such data at scale, in a secure manner and while preserving privacy, presents fundamental challenges that
-existing industry standards fail to adequately address." />
+sensitive and owned by individuals or organizations. However, enabling these autonomous entities to access such data
+dynamically at scale, in a secure manner, and while preserving privacy and transparency across multi-entity operations,
+presents fundamental challenges that existing industry standards fail to adequately address." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bitscrafter.com/products/overview_web_of_trust/" /><meta property="article:section" content="products" />
 
 
 
   <meta itemprop="name" content="Overview - Web of Trust">
-  <meta itemprop="description" content="Patent Pending Problem Statement Contextual data to deliver personalized experiences constitutes an essential need of modern digital ecosystems that increasingly rely on autonomous software entities—including AI agents, applications, and services. This data is often sensitive and belongs to specific entities (persons, organizations). However, enabling these autonomous entities to access such data at scale, in a secure manner and while preserving privacy, presents fundamental challenges that existing industry standards fail to adequately address.">
-  <meta itemprop="wordCount" content="2410">
+  <meta itemprop="description" content="Patent Pending Problem Statement Contextual data to deliver personalized experiences constitutes an essential need of modern digital ecosystems that increasingly rely on autonomous software entities—including AI agents, applications, and services. This data is often sensitive and owned by individuals or organizations. However, enabling these autonomous entities to access such data dynamically at scale, in a secure manner, and while preserving privacy and transparency across multi-entity operations, presents fundamental challenges that existing industry standards fail to adequately address.">
+  <meta itemprop="wordCount" content="2540">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Overview - Web of Trust">
-  <meta name="twitter:description" content="Patent Pending Problem Statement Contextual data to deliver personalized experiences constitutes an essential need of modern digital ecosystems that increasingly rely on autonomous software entities—including AI agents, applications, and services. This data is often sensitive and belongs to specific entities (persons, organizations). However, enabling these autonomous entities to access such data at scale, in a secure manner and while preserving privacy, presents fundamental challenges that existing industry standards fail to adequately address.">
+  <meta name="twitter:description" content="Patent Pending Problem Statement Contextual data to deliver personalized experiences constitutes an essential need of modern digital ecosystems that increasingly rely on autonomous software entities—including AI agents, applications, and services. This data is often sensitive and owned by individuals or organizations. However, enabling these autonomous entities to access such data dynamically at scale, in a secure manner, and while preserving privacy and transparency across multi-entity operations, presents fundamental challenges that existing industry standards fail to adequately address.">
 
     <link rel="preload" href="/css/compiled/main.min.aa6bcb31c04adbd6e5a581154dbf626f84b09192ce4cd2b45b0238f776d5fc22.css" as="style" integrity="sha256-qmvLMcBK29blpYEVTb9ib4SwkZLOTNK0WwI493bV/CI=" />
     <link href="/css/compiled/main.min.aa6bcb31c04adbd6e5a581154dbf626f84b09192ce4cd2b45b0238f776d5fc22.css" rel="stylesheet" integrity="sha256-qmvLMcBK29blpYEVTb9ib4SwkZLOTNK0WwI493bV/CI=" />
@@ -316,9 +316,33 @@ existing industry standards fail to adequately address." />
 <h2>Problem Statement<span class="hx-absolute -hx-mt-20" id="problem-statement"></span>
     <a href="#problem-statement" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Contextual data to deliver personalized experiences constitutes an essential need of modern digital ecosystems that
 increasingly rely on autonomous software entities—including AI agents, applications, and services. This data is often
-sensitive and belongs to specific entities (persons, organizations). However, enabling these autonomous entities to
-access such data at scale, in a secure manner and while preserving privacy, presents fundamental challenges that
-existing industry standards fail to adequately address.</p>
+sensitive and owned by individuals or organizations. However, enabling these autonomous entities to access such data
+dynamically at scale, in a secure manner, and while preserving privacy and transparency across multi-entity operations,
+presents fundamental challenges that existing industry standards fail to adequately address.</p>
+<p>Three fundamental challenges prevent autonomous entities from operating securely at scale:</p>
+<p><figure>
+    <img src="/images/products/wot/wot_problem_statement.png" title="Figure 1 - Problem Statement" alt="Figure 1" loading="lazy" />
+    <figcaption>Figure 1 - Problem Statement</figcaption>
+  </figure></p>
+<ul>
+<li>
+<p><strong>Scalable Dynamic Data-Access</strong>: Agents dynamically encounter new data sources during operation based on evolving
+processing needs, making pre-established relationships increasingly impractical to scale when serving millions of
+users across potentially hundreds or thousands of data providers</p>
+</li>
+<li>
+<p><strong>On-the-Fly Trust Verification</strong>: Without pre-established trust credentials, each data provider must independently
+verify an autonomous entity&rsquo;s legitimacy and trustworthiness on-the-fly prior to authorizing data access, but
+traditional manual verification processes cannot scale to real-time requirements, creating redundant overhead and
+operational bottlenecks across data providers</p>
+</li>
+<li>
+<p><strong>Multi-Entity Data-Processing Transparency</strong>: Autonomous operations typically involve multiple entities working
+together—agents coordinating with third-party services, LLMs, and data processors—yet users lack visibility into this
+processing chain, cannot grant granular permissions to each participant, or maintain accountability for operations
+across the ecosystem</p>
+</li>
+</ul>
 <p><strong>AI Agent View</strong>
 Autonomous entities face a critical operational constraint: they must access sensitive data from numerous providers to
 function effectively, yet each provider requires confidence in the entity&rsquo;s trustworthiness. Traditional approaches
@@ -326,34 +350,21 @@ require manual registration with each data provider—establishing credentials, 
 access terms. This model fails at scale: an agent serving millions of users cannot feasibly pre-register with every
 potential data source, especially when processing requirements emerge dynamically during operation.</p>
 <p><strong>User View</strong>
-Users face a trust evaluation challenge before engaging any autonomous entity: they must assess whether a previously
-unknown agent is legitimate, identify its controlling organization, understand its security practices, and determine if
-it merits access to sensitive data. Current approaches lack mechanisms for presenting verifiable evidence of an agent&rsquo;s
-trustworthiness and organizational backing. Without this foundational trust assessment, users cannot make informed
-decisions about establishing relationships, yet subsequent data sharing consent decisions depend entirely on this
-initial determination.</p>
+Users face dual challenges when engaging autonomous entities. First, before granting data access, they must evaluate an
+unknown agent&rsquo;s legitimacy, organizational backing, and security practices—yet lack mechanisms to verify these claims.
+Second, users remain unaware of the complete processing chain, exposing their data to unknown third-party services,
+LLMs, and processors without explicit consent. This opacity prevents assessing privacy risks or establishing
+accountability, leaving users unable to protect their privacy or exercise meaningful control.</p>
 <p><strong>Data Provider View</strong>
 Data providers face a real-time verification challenge: they must dynamically evaluate an entity&rsquo;s trustworthiness at
 the moment of first data access request, often without prior relationship or interaction history. Current approaches
 lack common industry-adopted, programmatic mechanisms to verify an unknown entity&rsquo;s legitimacy, organizational backing,
 and user authorization in real-time. This forces data providers to choose between denying access (blocking legitimate
 use cases) or implementing manual registration processes that cannot scale for autonomous operations.</p>
-<p>These challenges become acute in autonomous operations where:</p>
-<ul>
-<li>Data Discovery: Agents dynamically encounter new data sources during operation based on evolving processing needs,
-making the scaling of pre-established relationships increasingly impractical when serving millions of users across
-potentially hundreds or thousands of data providers</li>
-<li>Entity Trustworthiness: Without pre-established trust credentials, each data provider must independently verify an
-autonomous entity&rsquo;s legitimacy and trustworthiness on-the-fly prior to authorizing data access, thus creating
-redundant verification overhead across data providers</li>
-<li>Multi-Entity Collaboration: Autonomous operations typically involve multiple entities working together—agents
-coordinating with third-party services, LLMs, and data processors—yet users lack visibility into this collaboration
-chain, cannot grant granular permissions to each participant, or maintain accountability for operations across the
-ecosystem</li>
-</ul>
-<p>Solving these challenges requires a comprehensive framework that enables dynamic trust establishment, real-time
+<p>Solving these three interconnected challenges—scalable dynamic data access, on-the-fly trust verification, and
+multi-entity transparency—requires a comprehensive framework that enables dynamic trust establishment, real-time
 verification, and transparent multi-entity coordination while maintaining user control and cryptographic accountability
-throughout the data lifecycle</p>
+throughout the data lifecycle.</p>
 <h2>System Overview<span class="hx-absolute -hx-mt-20" id="system-overview"></span>
     <a href="#system-overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The Web of Trust (WoT) system addresses the challenges outlined in the problem statement by creating a comprehensive
 framework for managing trust, relationships, consent, and data access across organizations, users, autonomous entities,
@@ -363,8 +374,8 @@ Chains, OpenID Federation) with OAuth2/OIDC protocols while extending them to su
 operations, explicit multi-party relationships, granular consent management, and cryptographically accountable data
 access throughout the entire lifecycle.</p>
 <p><figure>
-    <img src="/images/products/wot/wot_system_overview_black-white-gray.png" title="System Overview" alt="System Overview" loading="lazy" />
-    <figcaption>System Overview</figcaption>
+    <img src="/images/products/wot/wot_system_overview_black-white-gray.png" title="Figure 2 - System Overview" alt="Figure 2" loading="lazy" />
+    <figcaption>Figure 2 - System Overview</figcaption>
   </figure></p>
 <h3>Details<span class="hx-absolute -hx-mt-20" id="details"></span>
     <a href="#details" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The diagram illustrates WoT&rsquo;s end-to-end operation through four interconnected phases:</p>
@@ -395,10 +406,16 @@ deny, or conditionally approve consent with fine-grained control over data shari
 interface, which serves as the actual authorization mechanism for data access. WoT&rsquo;s consent layer acts as an
 enhancement wrapper around this traditional OAuth2 consent, providing multi-entity visibility and trustworthiness
 assessment.</p>
-<p><strong>4. Data Access Authorization:</strong> After user consent is obtained, WoT authorizes organizational entities to access the
-specified user data. WoT retrieves data from user-authorized sources, validates that the requesting entity&rsquo;s credentials
-and session are current and valid, verifies the access complies with consent parameters and relationship constraints,
-and securely delivers the data through end-to-end encrypted channels. Every data access operation is cryptographically
+<p><strong>4a. Data Discovery (Optional):</strong> After consent is obtained, organizational entities may query WoT to discover what
+data types are available for specific users within their established relationship. WoT returns available data types
+based on the user&rsquo;s connected data providers and the granted consent permissions, allowing entities to proactively
+determine data availability before requesting access. Entities that already know the specific data types they need may
+skip discovery and proceed directly to data access, though they will only learn of data unavailability when the access
+request returns an unavailable response.</p>
+<p><strong>4b. Data Access Authorization:</strong> With consent in place, WoT authorizes organizational entities to access the specified user data.
+WoT retrieves data from user-authorized sources, validates that the requesting entity&rsquo;s credentials and session are
+current and valid, verifies the access complies with consent parameters and relationship constraints, and securely
+delivers the data through end-to-end encrypted channels. Metadata of every data access operation is cryptographically
 logged for auditability, enabling users to review which entities accessed what data types and when, with the ability to
 revoke access or modify consent at any time.</p>
 <p>This integrated approach ensures that trust flows seamlessly from external verification through relationship formation,
@@ -409,8 +426,8 @@ accountability and user sovereignty over their data and digital relationships.</
 third-party entities provide trust services), Identity &amp; Relationships (where organizations and users establish verified
 identities and relationships), and Web of Trust (where WoT mediates relationships, consent, and data access).</p>
 <p><figure>
-    <img src="/images/products/wot/wot_participating_entities_black-white-gray.png" title="Entities" alt="Entities" loading="lazy" />
-    <figcaption>Entities</figcaption>
+    <img src="/images/products/wot/wot_participating_entities_black-white-gray.png" title="Figure 3 - Participating Entities" alt="Entities" loading="lazy" />
+    <figcaption>Figure 3 - Participating Entities</figcaption>
   </figure></p>
 <h3>Entity Categories<span class="hx-absolute -hx-mt-20" id="entity-categories"></span>
     <a href="#entity-categories" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The participating entities are organized into two primary categories:</p>
@@ -435,7 +452,7 @@ access. Users have:</p>
 <ul>
 <li>Cryptographic proof of user verification (biometric or PIN confirmation)</li>
 <li>Device possession verification (authenticator security)</li>
-<li>Explicit consent binding (user presence confirmation)</li>
+<li>Explicit consent binding (cryptographically tied to user verification)</li>
 </ul>
 <p>Users may undergo optional identity verification through external providers, with verification status affecting which
 relationship types they can establish. Even without formal verification, FIDO2 authentication establishes cryptographic

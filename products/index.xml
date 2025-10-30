@@ -32,9 +32,33 @@
 &lt;h2&gt;Problem Statement&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;problem-statement&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#problem-statement&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Contextual data to deliver personalized experiences constitutes an essential need of modern digital ecosystems that
 increasingly rely on autonomous software entities—including AI agents, applications, and services. This data is often
-sensitive and belongs to specific entities (persons, organizations). However, enabling these autonomous entities to
-access such data at scale, in a secure manner and while preserving privacy, presents fundamental challenges that
-existing industry standards fail to adequately address.&lt;/p&gt;
+sensitive and owned by individuals or organizations. However, enabling these autonomous entities to access such data
+dynamically at scale, in a secure manner, and while preserving privacy and transparency across multi-entity operations,
+presents fundamental challenges that existing industry standards fail to adequately address.&lt;/p&gt;
+&lt;p&gt;Three fundamental challenges prevent autonomous entities from operating securely at scale:&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_problem_statement.png&#34; title=&#34;Figure 1 - Problem Statement&#34; alt=&#34;Figure 1&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Figure 1 - Problem Statement&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Scalable Dynamic Data-Access&lt;/strong&gt;: Agents dynamically encounter new data sources during operation based on evolving
+processing needs, making pre-established relationships increasingly impractical to scale when serving millions of
+users across potentially hundreds or thousands of data providers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;On-the-Fly Trust Verification&lt;/strong&gt;: Without pre-established trust credentials, each data provider must independently
+verify an autonomous entity&amp;rsquo;s legitimacy and trustworthiness on-the-fly prior to authorizing data access, but
+traditional manual verification processes cannot scale to real-time requirements, creating redundant overhead and
+operational bottlenecks across data providers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Multi-Entity Data-Processing Transparency&lt;/strong&gt;: Autonomous operations typically involve multiple entities working
+together—agents coordinating with third-party services, LLMs, and data processors—yet users lack visibility into this
+processing chain, cannot grant granular permissions to each participant, or maintain accountability for operations
+across the ecosystem&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;AI Agent View&lt;/strong&gt;
 Autonomous entities face a critical operational constraint: they must access sensitive data from numerous providers to
 function effectively, yet each provider requires confidence in the entity&amp;rsquo;s trustworthiness. Traditional approaches
@@ -42,34 +66,21 @@ require manual registration with each data provider—establishing credentials, 
 access terms. This model fails at scale: an agent serving millions of users cannot feasibly pre-register with every
 potential data source, especially when processing requirements emerge dynamically during operation.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;User View&lt;/strong&gt;
-Users face a trust evaluation challenge before engaging any autonomous entity: they must assess whether a previously
-unknown agent is legitimate, identify its controlling organization, understand its security practices, and determine if
-it merits access to sensitive data. Current approaches lack mechanisms for presenting verifiable evidence of an agent&amp;rsquo;s
-trustworthiness and organizational backing. Without this foundational trust assessment, users cannot make informed
-decisions about establishing relationships, yet subsequent data sharing consent decisions depend entirely on this
-initial determination.&lt;/p&gt;
+Users face dual challenges when engaging autonomous entities. First, before granting data access, they must evaluate an
+unknown agent&amp;rsquo;s legitimacy, organizational backing, and security practices—yet lack mechanisms to verify these claims.
+Second, users remain unaware of the complete processing chain, exposing their data to unknown third-party services,
+LLMs, and processors without explicit consent. This opacity prevents assessing privacy risks or establishing
+accountability, leaving users unable to protect their privacy or exercise meaningful control.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Data Provider View&lt;/strong&gt;
 Data providers face a real-time verification challenge: they must dynamically evaluate an entity&amp;rsquo;s trustworthiness at
 the moment of first data access request, often without prior relationship or interaction history. Current approaches
 lack common industry-adopted, programmatic mechanisms to verify an unknown entity&amp;rsquo;s legitimacy, organizational backing,
 and user authorization in real-time. This forces data providers to choose between denying access (blocking legitimate
 use cases) or implementing manual registration processes that cannot scale for autonomous operations.&lt;/p&gt;
-&lt;p&gt;These challenges become acute in autonomous operations where:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Data Discovery: Agents dynamically encounter new data sources during operation based on evolving processing needs,
-making the scaling of pre-established relationships increasingly impractical when serving millions of users across
-potentially hundreds or thousands of data providers&lt;/li&gt;
-&lt;li&gt;Entity Trustworthiness: Without pre-established trust credentials, each data provider must independently verify an
-autonomous entity&amp;rsquo;s legitimacy and trustworthiness on-the-fly prior to authorizing data access, thus creating
-redundant verification overhead across data providers&lt;/li&gt;
-&lt;li&gt;Multi-Entity Collaboration: Autonomous operations typically involve multiple entities working together—agents
-coordinating with third-party services, LLMs, and data processors—yet users lack visibility into this collaboration
-chain, cannot grant granular permissions to each participant, or maintain accountability for operations across the
-ecosystem&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Solving these challenges requires a comprehensive framework that enables dynamic trust establishment, real-time
+&lt;p&gt;Solving these three interconnected challenges—scalable dynamic data access, on-the-fly trust verification, and
+multi-entity transparency—requires a comprehensive framework that enables dynamic trust establishment, real-time
 verification, and transparent multi-entity coordination while maintaining user control and cryptographic accountability
-throughout the data lifecycle&lt;/p&gt;
+throughout the data lifecycle.&lt;/p&gt;
 &lt;h2&gt;System Overview&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;system-overview&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#system-overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Web of Trust (WoT) system addresses the challenges outlined in the problem statement by creating a comprehensive
 framework for managing trust, relationships, consent, and data access across organizations, users, autonomous entities,
@@ -79,8 +90,8 @@ Chains, OpenID Federation) with OAuth2/OIDC protocols while extending them to su
 operations, explicit multi-party relationships, granular consent management, and cryptographically accountable data
 access throughout the entire lifecycle.&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
-    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_system_overview_black-white-gray.png&#34; title=&#34;System Overview&#34; alt=&#34;System Overview&#34; loading=&#34;lazy&#34; /&gt;
-    &lt;figcaption&gt;System Overview&lt;/figcaption&gt;
+    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_system_overview_black-white-gray.png&#34; title=&#34;Figure 2 - System Overview&#34; alt=&#34;Figure 2&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Figure 2 - System Overview&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h3&gt;Details&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;details&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#details&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The diagram illustrates WoT&amp;rsquo;s end-to-end operation through four interconnected phases:&lt;/p&gt;
@@ -111,10 +122,16 @@ deny, or conditionally approve consent with fine-grained control over data shari
 interface, which serves as the actual authorization mechanism for data access. WoT&amp;rsquo;s consent layer acts as an
 enhancement wrapper around this traditional OAuth2 consent, providing multi-entity visibility and trustworthiness
 assessment.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4. Data Access Authorization:&lt;/strong&gt; After user consent is obtained, WoT authorizes organizational entities to access the
-specified user data. WoT retrieves data from user-authorized sources, validates that the requesting entity&amp;rsquo;s credentials
-and session are current and valid, verifies the access complies with consent parameters and relationship constraints,
-and securely delivers the data through end-to-end encrypted channels. Every data access operation is cryptographically
+&lt;p&gt;&lt;strong&gt;4a. Data Discovery (Optional):&lt;/strong&gt; After consent is obtained, organizational entities may query WoT to discover what
+data types are available for specific users within their established relationship. WoT returns available data types
+based on the user&amp;rsquo;s connected data providers and the granted consent permissions, allowing entities to proactively
+determine data availability before requesting access. Entities that already know the specific data types they need may
+skip discovery and proceed directly to data access, though they will only learn of data unavailability when the access
+request returns an unavailable response.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4b. Data Access Authorization:&lt;/strong&gt; With consent in place, WoT authorizes organizational entities to access the specified user data.
+WoT retrieves data from user-authorized sources, validates that the requesting entity&amp;rsquo;s credentials and session are
+current and valid, verifies the access complies with consent parameters and relationship constraints, and securely
+delivers the data through end-to-end encrypted channels. Metadata of every data access operation is cryptographically
 logged for auditability, enabling users to review which entities accessed what data types and when, with the ability to
 revoke access or modify consent at any time.&lt;/p&gt;
 &lt;p&gt;This integrated approach ensures that trust flows seamlessly from external verification through relationship formation,
@@ -125,8 +142,8 @@ accountability and user sovereignty over their data and digital relationships.&l
 third-party entities provide trust services), Identity &amp;amp; Relationships (where organizations and users establish verified
 identities and relationships), and Web of Trust (where WoT mediates relationships, consent, and data access).&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
-    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_participating_entities_black-white-gray.png&#34; title=&#34;Entities&#34; alt=&#34;Entities&#34; loading=&#34;lazy&#34; /&gt;
-    &lt;figcaption&gt;Entities&lt;/figcaption&gt;
+    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_participating_entities_black-white-gray.png&#34; title=&#34;Figure 3 - Participating Entities&#34; alt=&#34;Entities&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Figure 3 - Participating Entities&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h3&gt;Entity Categories&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;entity-categories&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#entity-categories&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The participating entities are organized into two primary categories:&lt;/p&gt;
@@ -151,7 +168,7 @@ access. Users have:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Cryptographic proof of user verification (biometric or PIN confirmation)&lt;/li&gt;
 &lt;li&gt;Device possession verification (authenticator security)&lt;/li&gt;
-&lt;li&gt;Explicit consent binding (user presence confirmation)&lt;/li&gt;
+&lt;li&gt;Explicit consent binding (cryptographically tied to user verification)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Users may undergo optional identity verification through external providers, with verification status affecting which
 relationship types they can establish. Even without formal verification, FIDO2 authentication establishes cryptographic
