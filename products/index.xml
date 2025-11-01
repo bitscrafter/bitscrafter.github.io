@@ -15,7 +15,84 @@
     
     
     <item>
-      <title>Overview - Web of Trust</title>
+      <title>One-Pager — Web of Trust</title>
+      <link>https://bitscrafter.com/products/one_pager_web_of_trust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bitscrafter.com/products/one_pager_web_of_trust/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/logo.png&#34; alt=&#34;logo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_banner_onepager.png&#34; alt=&#34;Banner&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/patent-certificate_48x48.png&#34; title=&#34;Patent Pending&#34; alt=&#34;Patent Pending&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Patent Pending&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;Web of Trust — Enabling Autonomous Operations with Secure Data-Access at Scale&lt;/h1&gt;&lt;h2&gt;The Problem&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;the-problem&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#the-problem&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Modern digital ecosystems increasingly rely on AI agents that require access to sensitive contextual data to deliver
+personalized experiences. However, three fundamental challenges may represent significant obstacles for their secure
+operation at scale.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Scalable Dynamic Data-Access&lt;/strong&gt;: Agents may dynamically encounter new data sources during operation based on
+evolving processing needs, making pre-established relationships impractical.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. On-the-Fly Trust Verification&lt;/strong&gt;: Without previous knowledge about an agent&amp;rsquo;s true identity, data providers must
+independently verify their legitimacy and trustworthiness programmatically and in real-time prior to authorizing data
+access.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Multi-Entity Data-Processing Transparency&lt;/strong&gt;: Autonomous operations typically involve multiple entities working
+together, yet users have no visibility into the full processing chain, and thus cannot grant granular permissions to
+each participant nor trace accountability across the entities using their data.&lt;/p&gt;
+&lt;h2&gt;The Solution&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;the-solution&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#the-solution&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Web of Trust (WoT) system creates a comprehensive framework for managing trust, relationships, consent, and data
+access. WoT operates as a trusted intermediary extending existing identity standards (X.509, OAuth2/OIDC) to support
+dynamic and secure autonomous operations through: (1) upfront centralized verification of agent trustworthiness, (2)
+transparent multi-party relationship management, (3) granular consent control, and (4) cryptographically accountable
+data access orchestration.&lt;/p&gt;
+&lt;h3&gt;How It Works&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;how-it-works&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#how-it-works&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;WoT enables secure autonomous operations through four interconnected phases:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Trust Establishment&lt;/strong&gt;: Organizations undergo identity verification through external trust anchors (X.509
+Certificate Chains, OpenID Federation) or WoT-orchestrated processes, then create delegated entities (agents,
+applications, services) that inherit organizational trust. Users must register strong FIDO2/WebAuthn credentials proving
+the same person returns for each access; identity verification is optional but enables higher-trust relationships.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Relationship Formation&lt;/strong&gt;: Organizations and users form explicit relationships within WoT with defined scopes,
+constraints, and cryptographic accountability. Before approving relationships, WoT verifies that requested data access
+permissions align with the trust levels established during registration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Consent Formulation&lt;/strong&gt;: WoT adds an extra layer of granular consent that provides detailed information about which
+specific entities access what data, under what conditions, and with evidence of trustworthiness. The IdP layer handles
+standard OAuth2 authorization for actual data access.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. Data Discovery &amp;amp; Access Authorization&lt;/strong&gt;: WoT enables entities to discover available data types and, upon request,
+securely delivers authorized data after validating credentials and consent compliance. All access is cryptographically
+logged.&lt;/p&gt;
+&lt;h2&gt;Key Participants&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;key-participants&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#key-participants&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Agent&lt;/strong&gt;: Autonomous software entity operating with varying degrees of independence on behalf of a cryptographically
+linked organization to provide services to users. Agents make context-driven decisions supported by access to data from
+multiple sources.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;User&lt;/strong&gt;: Individual entity who owns personal data and establishes relationships with agents requiring data access.
+Users authenticate using FIDO2/WebAuthn credentials providing cryptographic proof of identity bound to a consent
+acceptance.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Data Provider&lt;/strong&gt;: External entity that hosts or controls user data that agents wish to access. Data Providers enforce
+access control mechanisms before sharing any data.&lt;/p&gt;
+&lt;h2&gt;Value Proposition&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;value-proposition&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#value-proposition&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;WoT solves the three interconnected challenges by enabling:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic trust establishment&lt;/strong&gt; allowing agents to access new data sources without pre-registration with data
+providers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real-time verification&lt;/strong&gt; freeing data providers from establishing direct relationships with every agent and from the
+burden to programmatically verify entity legitimacy on-the-fly&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transparent multi-entity coordination&lt;/strong&gt; giving users visibility into the complete data processing chain, granular
+control over data sharing, and ability to review access history and revoke permissions at any time&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cryptographic accountability&lt;/strong&gt; throughout the data lifecycle ensuring non-repudiation and auditability&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User sovereignty&lt;/strong&gt; maintaining user control over data and digital relationships while enabling autonomous operations
+at scale&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The system uniquely addresses the needs of AI agents and autonomous entities while maintaining compatibility with
+existing identity standards, enabling agents to conduct secure data operations at scale, serving millions of users
+across thousands of data providers.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Overview — Web of Trust</title>
       <link>https://bitscrafter.com/products/overview_web_of_trust/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -24,9 +101,9 @@
         
         
         &lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/logo.png&#34; alt=&#34;logo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/banner.png&#34; alt=&#34;Banner&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_banner_overview.png&#34; alt=&#34;Banner&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
-    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/patent-certificate_48x48.svg&#34; title=&#34;Patent Pending&#34; alt=&#34;Patent Pending&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/patent-certificate_48x48.png&#34; title=&#34;Patent Pending&#34; alt=&#34;Patent Pending&#34; loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Patent Pending&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
 &lt;h2&gt;Problem Statement&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;problem-statement&#34;&gt;&lt;/span&gt;
@@ -128,12 +205,12 @@ based on the user&amp;rsquo;s connected data providers and the granted consent p
 determine data availability before requesting access. Entities that already know the specific data types they need may
 skip discovery and proceed directly to data access, though they will only learn of data unavailability when the access
 request returns an unavailable response.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4b. Data Access Authorization:&lt;/strong&gt; With consent in place, WoT authorizes organizational entities to access the specified user data.
-WoT retrieves data from user-authorized sources, validates that the requesting entity&amp;rsquo;s credentials and session are
-current and valid, verifies the access complies with consent parameters and relationship constraints, and securely
-delivers the data through end-to-end encrypted channels. Metadata of every data access operation is cryptographically
-logged for auditability, enabling users to review which entities accessed what data types and when, with the ability to
-revoke access or modify consent at any time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4b. Data Access Authorization:&lt;/strong&gt; With consent in place, WoT authorizes organizational entities to access the specified
+user data. WoT retrieves data from user-authorized sources, validates that the requesting entity&amp;rsquo;s credentials and
+session are current and valid, verifies the access complies with consent parameters and relationship constraints, and
+securely delivers the data through end-to-end encrypted channels. Metadata of every data access operation is
+cryptographically logged for auditability, enabling users to review which entities accessed what data types and when,
+with the ability to revoke access or modify consent at any time.&lt;/p&gt;
 &lt;p&gt;This integrated approach ensures that trust flows seamlessly from external verification through relationship formation,
 consent management, and data access, enabling secure autonomous operations while maintaining cryptographic
 accountability and user sovereignty over their data and digital relationships.&lt;/p&gt;
@@ -159,150 +236,102 @@ framework.&lt;/p&gt;
 Individual entity that owns personal data and establishes relationships with organizational entities requiring data
 access. Users have:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Personal preferences and privacy requirements that inform consent decisions&lt;/li&gt;
-&lt;li&gt;Legal rights under privacy regulations (GDPR, CCPA, HIPAA) that the system must respect&lt;/li&gt;
-&lt;li&gt;Multiple concurrent relationships with different organizations and their entities&lt;/li&gt;
+&lt;li&gt;Relationships with different organizations and their entities&lt;/li&gt;
 &lt;li&gt;Authentication capabilities through FIDO2/WebAuthn credentials&lt;/li&gt;
+&lt;li&gt;Regulatory privacy rights (GDPR, CCPA, HIPAA) that shape consent and data handling&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Users authenticate using FIDO2 authenticators that provide:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Cryptographic proof of user verification (biometric or PIN confirmation)&lt;/li&gt;
-&lt;li&gt;Device possession verification (authenticator security)&lt;/li&gt;
-&lt;li&gt;Explicit consent binding (cryptographically tied to user verification)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Users may undergo optional identity verification through external providers, with verification status affecting which
-relationship types they can establish. Even without formal verification, FIDO2 authentication establishes cryptographic
-proof that the current user is the same person who registered the account and possesses the registered device, providing
-the foundation for consent and authorization decisions.&lt;/p&gt;
+&lt;p&gt;When granting data access consent, users authenticate using FIDO2 to create a cryptographic binding between their
+verified identity and consent acceptance&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;User Device:&lt;/strong&gt;
-Physical or virtual device entity owned by an individual (smartphone, tablet, laptop). User devices:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Establish and maintain secure execution environment based on device authentication credentials stored in consumer
-crypto modules (FIDO2 authenticators, Keychain, Keystore, platform security modules)&lt;/li&gt;
-&lt;li&gt;Host user applications and store user credentials&lt;/li&gt;
-&lt;li&gt;Maintain security boundaries between applications to protect credential isolation&lt;/li&gt;
-&lt;li&gt;Optional registration with WoT enables enhanced security posture through device-level authentication&lt;/li&gt;
-&lt;/ul&gt;
+Physical or virtual device owned by an individual (smartphone, tablet, laptop) that, when registered with WoT,
+strengthens security posture through cryptographic device authentication.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Organization Entities&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;All organizational entities authenticate using asymmetric cryptography, providing cryptographic proof of entity identity
-and private key possession. Private keys must be stored and managed through secure crypto modules (HSM, TPM, Keychain)
-to prevent unauthorized access and enable non-repudiation.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Organization:&lt;/strong&gt;
-Business entity that offers software entities (agents, applications, services) to perform tasks for users.
-Organizations:&lt;/p&gt;
+Business entity that owns entities (agents, applications, services) that perform tasks for users. Organizations have:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Undergo mandatory identity verification through external trust anchors to establish WoT registration&lt;/li&gt;
-&lt;li&gt;Establish cryptographic credentials verified through trust chains from Certificate Authorities, OpenID Federation, or
-KYB providers&lt;/li&gt;
-&lt;li&gt;Create and own delegated entities that inherit organizational trust while maintaining independent authentication
-credentials&lt;/li&gt;
-&lt;li&gt;Assume legal liability for actions of their delegated entities through cryptographic attestation of ownership&lt;/li&gt;
-&lt;li&gt;Maintain organizational policies governing entity behavior, data handling, and relationship management&lt;/li&gt;
+&lt;li&gt;Verified identity through external trust anchors to establish WoT registration&lt;/li&gt;
+&lt;li&gt;Authentication capabilities through cryptographic credentials linked to trust anchors&lt;/li&gt;
+&lt;li&gt;Ownership of delegated entities that inherit organizational trust and that act on its behalf&lt;/li&gt;
+&lt;li&gt;Liability for actions of their delegated entities through cryptographic attestation of ownership&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Agent:&lt;/strong&gt;
-Software entity that operates with varying degrees of independence on behalf of an organization to provide services to
-users. Agents can make context-driven decisions and take actions within well-defined parameters, making them
-particularly suitable for AI-powered services that require adaptive behavior. Agents:&lt;/p&gt;
+Entity with varying degrees of independence that makes context-driven decisions and takes actions within well-defined
+parameters. Agents have:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Make decisions and take actions within parameters established by relationship constraints and organizational policies&lt;/li&gt;
-&lt;li&gt;Operate across multiple platforms and interact with other agents, applications, or services with varying degrees of
-independence, from fully independent to human-supervised operation&lt;/li&gt;
-&lt;li&gt;May require dynamic access to contextual data from multiple sources to support decision-making and adaptive behavior&lt;/li&gt;
-&lt;li&gt;Must obtain explicit user authorization to access data according to their operational requirements&lt;/li&gt;
-&lt;li&gt;Cryptographically sign all data access requests with credentials derived from organizational trust&lt;/li&gt;
+&lt;li&gt;Relationships with users to offer AI-powered service&lt;/li&gt;
+&lt;li&gt;Interactions across multiple platforms with other agents, applications, or services of the owning organization or of a
+third party&lt;/li&gt;
+&lt;li&gt;Responsibilities that may require dynamic access to contextual data from multiple sources&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Agents represent the primary use case driving WoT&amp;rsquo;s design, as AI agents particularly benefit from dynamic data access
 capabilities, cross-organizational operation support, and verifiable accountability mechanisms that enable independent
 operation while maintaining user control.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Application (App):&lt;/strong&gt;
-Software entity with specific functionality that operates on behalf of an organization to provide services to users.
-Applications:&lt;/p&gt;
+Entity with specific functionality that operates on behalf of an organization to provide services to users. Applications
+have:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Typically have defined user interfaces and operate within single platforms or environments&lt;/li&gt;
-&lt;li&gt;Execute predetermined functions with well-defined behavior patterns&lt;/li&gt;
-&lt;li&gt;Require explicit authorization to access user data based on functional requirements&lt;/li&gt;
-&lt;li&gt;Authenticate using organizational crypto module credentials inherited from parent organization&lt;/li&gt;
+&lt;li&gt;Relationships with users to deliver application functionality&lt;/li&gt;
+&lt;li&gt;User interfaces that operate within single platforms or environments&lt;/li&gt;
+&lt;li&gt;Predetermined functions with well-defined behavior patterns&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Service (Svc):&lt;/strong&gt;
-Backend software entity that provides specific functionality without direct user interaction. Services:&lt;/p&gt;
+Backend software entity that provides specific functionality without direct user interaction. Services have:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Operate continuously or on-demand to process data, perform computations, or integrate systems&lt;/li&gt;
-&lt;li&gt;May be invoked by applications, agents, or other services&lt;/li&gt;
-&lt;li&gt;Require explicit authorization when processing user data&lt;/li&gt;
-&lt;li&gt;Cryptographically authenticate using credentials establishing organizational ownership&lt;/li&gt;
+&lt;li&gt;Relationships with users to offer backend processing&lt;/li&gt;
+&lt;li&gt;Continuous or on-demand operations to process data, perform computations, or integrate systems&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Organization Device:&lt;/strong&gt;
-Physical or virtual device entity representing server infrastructure or enterprise hardware owned by an organization.
-Organizational devices:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Establish and maintain secure execution environment based on authentication credentials stored in enterprise crypto
-modules (HSM, TPM, secure enclaves)&lt;/li&gt;
-&lt;li&gt;Host multiple agents, applications, or services with isolated execution environments&lt;/li&gt;
-&lt;li&gt;Maintain security boundaries between organizational entities&lt;/li&gt;
-&lt;li&gt;Authenticate using crypto module credentials proving device identity and authorization&lt;/li&gt;
-&lt;/ul&gt;
+Physical or virtual device entity representing server infrastructure or enterprise hardware owned by an organization
+that, when registered with WoT, strengthens security posture through cryptographic device authentication.&lt;/p&gt;
 &lt;h3&gt;Supporting Entities&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;supporting-entities&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#supporting-entities&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Supporting entities operate in external layers and provide essential services that WoT integrates into its trust
 framework. These entities are grouped by the lifecycle phases where they participate.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Trust Establishment Phase&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Trust Anchor (TA):&lt;/strong&gt;
-Root authority in a trust hierarchy that establishes foundational trust. Trust Anchors include:&lt;/p&gt;
+Root authority in a trust hierarchy that establishes foundational trust. Trust Anchors may include:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Certificate Authorities (CA) in X.509 PKI ecosystems&lt;/li&gt;
 &lt;li&gt;Trust anchors in OpenID Federation hierarchies&lt;/li&gt;
 &lt;li&gt;Other recognized sources of cryptographic identity verification&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Trust Anchors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Provide cryptographic validation of identity claims and credentials&lt;/li&gt;
-&lt;li&gt;Issue signed attestations (certificates, entity statements) binding identities to public keys&lt;/li&gt;
-&lt;li&gt;Operate independently of WoT as external sources of trust&lt;/li&gt;
-&lt;li&gt;Enable verification without requiring online connectivity to the anchor (through signature validation)&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Identity Verification Provider (IVP):&lt;/strong&gt;
-External service that verifies the legal or real-world identity of users or organizations. IVPs:&lt;/p&gt;
+External service that verifies the legal or real-world identity of users or organizations. IVPs may include:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Perform identity proofing through document verification, biometric checks, or authoritative database queries&lt;/li&gt;
-&lt;li&gt;Execute Know Your Customer (KYC) verification for individuals&lt;/li&gt;
-&lt;li&gt;Execute Know Your Business (KYB) verification for organizations&lt;/li&gt;
-&lt;li&gt;Issue verification attestations that WoT uses to establish verified identity status&lt;/li&gt;
-&lt;li&gt;Provide evidence documentation supporting verification decisions (identity documents, verification methods, assurance
-levels)&lt;/li&gt;
+&lt;li&gt;Know Your Customer (KYC) providers for individual identity verification&lt;/li&gt;
+&lt;li&gt;Know Your Business (KYB) providers for organizational identity verification&lt;/li&gt;
+&lt;li&gt;Document authentication services for credential verification&lt;/li&gt;
+&lt;li&gt;Biometric verification services for liveness detection&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Verifiable Credential Issuer (VCI):&lt;/strong&gt;
-Entity that issues cryptographically signed credentials attesting to specific claims. VCIs:&lt;/p&gt;
+Entity that issues cryptographically signed credentials attesting to specific claims. VCIs may include:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Issue credentials conforming to W3C Verifiable Credentials Data Model or related standards&lt;/li&gt;
-&lt;li&gt;Sign credentials with issuer&amp;rsquo;s private key enabling independent verification&lt;/li&gt;
-&lt;li&gt;Include identity attributes, organizational affiliations, certifications, or permissions in credentials&lt;/li&gt;
-&lt;li&gt;Enable credential holders to present claims to relying parties without contacting issuer&lt;/li&gt;
-&lt;li&gt;Support decentralized identity verification models&lt;/li&gt;
+&lt;li&gt;Financial institutions issuing creditworthiness credentials&lt;/li&gt;
+&lt;li&gt;Government agencies issuing identity credentials&lt;/li&gt;
+&lt;li&gt;Academic institutions issuing educational credentials&lt;/li&gt;
+&lt;li&gt;Professional licensing bodies issuing certifications&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Consent Formulation Phase&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Identity Provider (IdP):&lt;/strong&gt;
-External service that manages user authentication and authorization for data access. IdPs:&lt;/p&gt;
+External service that manages user authentication and authorization for data access. IdPs may include:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Implement OAuth 2.0 and OpenID Connect protocols&lt;/li&gt;
-&lt;li&gt;Authenticate users to verify data ownership before authorizing access&lt;/li&gt;
-&lt;li&gt;Present standard OAuth 2.0 consent interfaces for authorization decisions&lt;/li&gt;
-&lt;li&gt;Issue access tokens to authorized clients (WoT in this system) for subsequent data retrieval&lt;/li&gt;
-&lt;li&gt;Manage token lifecycle (issuance, renewal, revocation) according to OAuth 2.0 specifications&lt;/li&gt;
-&lt;li&gt;Work with Data Providers to enforce access control decisions based on user consent&lt;/li&gt;
+&lt;li&gt;Enterprise identity services (e.g., Microsoft Entra ID, Okta)&lt;/li&gt;
+&lt;li&gt;Consumer identity platforms (e.g., Google Identity Services, Apple Sign-In)&lt;/li&gt;
+&lt;li&gt;Federated identity systems supporting SAML/OIDC protocols&lt;/li&gt;
+&lt;li&gt;Social identity providers for authentication delegation (e.g., Facebook Login, LinkedIn Sign-In)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Examples of IdPs include Google Identity Services, Microsoft Entra ID, Apple Authentication Services, and other major
-identity providers.&lt;/p&gt;
+&lt;p&gt;Identity Providers have a trust relationship with WoT rather than establishing direct trust relationships with every
+potential agent.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Data Access Authorization Phase&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Data Provider (DP):&lt;/strong&gt;
-External entity that hosts or controls user data that organizational entities wish to access. Data Providers:&lt;/p&gt;
+External entity that hosts or controls user data that organizational entities wish to access. Data Providers may
+include:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Implement access control mechanisms validating authorization tokens before releasing data&lt;/li&gt;
-&lt;li&gt;Accept OAuth 2.0 access tokens issued by IdPs as proof of authorization&lt;/li&gt;
-&lt;li&gt;Respond to authorized data requests based on token scope and user consent parameters&lt;/li&gt;
-&lt;li&gt;May be operated by the same organization as the IdP or be separate entities&lt;/li&gt;
-&lt;li&gt;Maintain their own security policies and access controls&lt;/li&gt;
-&lt;li&gt;Log data access for their own audit and compliance purposes&lt;/li&gt;
+&lt;li&gt;Financial institutions providing account and transaction data&lt;/li&gt;
+&lt;li&gt;Healthcare systems providing medical records and health data&lt;/li&gt;
+&lt;li&gt;Fitness platforms providing wellness and activity data&lt;/li&gt;
+&lt;li&gt;Cloud storage services providing user-managed files&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Data Providers trust IdP-issued tokens rather than establishing direct trust relationships with every potential client.&lt;/p&gt;
+&lt;p&gt;Data Providers trust IdP-issued tokens rather than establishing direct trust relationships with every potential agent.&lt;/p&gt;
 &lt;h3&gt;Entity Relationships&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;entity-relationships&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#entity-relationships&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;These entities interact across the three trust layers:&lt;/p&gt;
 &lt;ul&gt;
