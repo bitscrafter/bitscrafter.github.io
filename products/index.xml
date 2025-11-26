@@ -16,226 +16,6 @@
     
     <item>
       <title>One-Pager — Web of Trust</title>
-      <link>https://bitscrafter.com/products/demo_data_access_consent/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bitscrafter.com/products/demo_data_access_consent/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/logo.png&#34; alt=&#34;logo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_banner_demo.png&#34; alt=&#34;Banner&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure&gt;
-    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/patent-certificate_48x48.png&#34; title=&#34;Patent Pending&#34; alt=&#34;Patent Pending&#34; loading=&#34;lazy&#34; /&gt;
-    &lt;figcaption&gt;Patent Pending&lt;/figcaption&gt;
-  &lt;/figure&gt;&lt;/p&gt;
-&lt;h1&gt;Web of Trust: Data Access Consent Demo&lt;/h1&gt;&lt;!-- Link to WoT Intro Video: https://youtu.be/JFbsCdwZsXs --&gt;
-&lt;h2&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This article presents a demonstration of the Web of Trust (WoT) system&amp;rsquo;s Enhanced Consent mechanism for granting data
-access to autonomous agents. The demo showcases how WoT acts as a trusted intermediary, extending traditional
-OAuth2/OIDC identity standards to provide users with granular, transparent control over which organizations and their
-autonomous agents can access their data from third-party providers.&lt;/p&gt;
-&lt;p&gt;Unlike standard OAuth2 consent flows where only the client application is disclosed, WoT&amp;rsquo;s Enhanced Consent Screen
-explicitly presents the Organization, the specific Agent (autonomous entity), the Data Provider, and the Identity
-Provider involved in the data access request. This transparency enables users to make informed decisions about granting
-access while WoT maintains cryptographic accountability for all data access operations.&lt;/p&gt;
-&lt;h2&gt;Context: Where This Demo Fits in Web of Trust&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;context-where-this-demo-fits-in-web-of-trust&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#context-where-this-demo-fits-in-web-of-trust&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Web of Trust system provides a comprehensive framework for managing trust relationships, identity verification,
-consent, and data access across organizations, users, and autonomous entities. The following diagram illustrates the
-four foundational use cases of WoT:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_functional_roles_black-white-gray.png&#34; alt=&#34;WoT Functional Roles&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The demo presented in this article focuses specifically on &lt;strong&gt;Use Case #3: User Granting Data Access&lt;/strong&gt;, which represents
-a critical interaction point where:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Use Case #1 - Establishing Trust&lt;/strong&gt;: Trust anchors (organizations, identity verification providers) have already been
-established within the WoT ecosystem&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Use Case #2 - Registering Trusted Entities&lt;/strong&gt;: Organizations and their autonomous agents have been registered as
-trusted entities within WoT&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Use Case #3 - User Granting Data Access&lt;/strong&gt; (This Demo): Users grant explicit, granular consent for registered agents
-to access their data from third-party providers like Google&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Use Case #4 - Agent Accessing Data&lt;/strong&gt;: Authorized agents subsequently access user data in accordance with the granted
-consent&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This demonstration illustrates the consent workflow that bridges user authorization with autonomous agent data access,
-showing how WoT extends traditional identity protocols to support the unique requirements of autonomous operations.&lt;/p&gt;
-&lt;h2&gt;Demo: Participants&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;demo-participants&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#demo-participants&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The demonstration involves four key participants working together to enable the enhanced consent flow:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_data_access_black-white-gray.png&#34; alt=&#34;Demo Flow&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h3&gt;User with Browser&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;user-with-browser&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#user-with-browser&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The end user accessing the WoT Portal through a web browser. The user initiates the data access consent process and
-makes decisions about which data to share with which organizations and agents.&lt;/p&gt;
-&lt;h3&gt;WoT Portal (React Frontend)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;wot-portal-react-frontend&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#wot-portal-react-frontend&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A web-based frontend application built with React that provides the user interface for the Web of Trust system. The
-portal presents the Enhanced Consent Screen and manages the user&amp;rsquo;s interaction with the consent flow.&lt;/p&gt;
-&lt;h3&gt;Identity Subsystem (Rust Backend)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;identity-subsystem-rust-backend&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#identity-subsystem-rust-backend&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The WoT backend service implemented in Rust that orchestrates the authorization workflow. It serves the authorization
-options, manages the consent process, and coordinates with external identity and data providers. The Identity Subsystem
-implements the core business logic for data access authorization following Clean Architecture principles.&lt;/p&gt;
-&lt;h3&gt;Google Authorization Service (OAuth2/OIDC)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;google-authorization-service-oauth2oidc&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#google-authorization-service-oauth2oidc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Google&amp;rsquo;s standard OAuth2 and OpenID Connect authorization service, which acts as both the Identity Provider (IdP) and
-Data Provider for this demonstration. Google authenticates the user and manages consent for WoT (as an OAuth2 client) to
-access the user&amp;rsquo;s Google data.&lt;/p&gt;
-&lt;h2&gt;Demo: Video&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;demo-video&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#demo-video&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose&#34; style=&#34;--hextra-cards-grid-cols: 1;&#34;&gt; &lt;a
-   class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;&gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z&#34;/&gt;&lt;/svg&gt;WoT Demo - Data Access Consent&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;&lt;br/&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/59ok0OGL3hs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
-     &lt;/div&gt;
- &lt;br/&gt;Data Access Consent Demo&lt;/div&gt;&lt;/a&gt; &lt;/div&gt;
-
-&lt;h2&gt;Demo: Walkthrough&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;demo-walkthrough&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#demo-walkthrough&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The demonstration showcases the complete flow of the enhanced consent process:&lt;/p&gt;
-&lt;h3&gt;1. Sign-In Initiation&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-sign-in-initiation&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#1-sign-in-initiation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The user navigates to the WoT Portal landing page and clicks the &amp;ldquo;Sign In with Google&amp;rdquo; button to initiate the data
-access consent flow.&lt;/p&gt;
-&lt;h3&gt;2. Enhanced Consent Screen (WoT Layer)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-enhanced-consent-screen-wot-layer&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#2-enhanced-consent-screen-wot-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After clicking the sign-in button, the user is immediately presented with WoT&amp;rsquo;s Enhanced Consent Screen. This screen
-provides comprehensive transparency about the data access request by displaying:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Organization&lt;/strong&gt;: The organization requesting data access on behalf of its autonomous agent&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Agent/Application&lt;/strong&gt;: The specific autonomous agent or application that will access the data&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data Provider&lt;/strong&gt;: Google (in this demo), indicating where the data resides&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Identity Provider&lt;/strong&gt;: Google (in this demo), confirming who will authenticate the user&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Data Types&lt;/strong&gt;: A detailed list of data types being requested (e.g., email, profile information, calendar access),
-with user-selectable checkboxes allowing granular control over which data types to grant access to&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;WoT Intermediary Disclaimer&lt;/strong&gt;: A clear message explaining that Web of Trust acts as a trusted intermediary and will
-facilitate access to the data strictly in accordance with the granted consent&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This Enhanced Consent Screen is a WoT-specific addition to the standard OAuth2 flow, providing users with critical
-context about the autonomous operations and organizational relationships involved in the data access request.&lt;/p&gt;
-&lt;h3&gt;3. Google Consent Screen (IdP Layer)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-google-consent-screen-idp-layer&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#3-google-consent-screen-idp-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After accepting the WoT Enhanced Consent, the user is redirected to Google&amp;rsquo;s standard OAuth2 consent screen. This screen
-displays:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;OAuth2 Client&lt;/strong&gt;: &amp;ldquo;Web of Trust&amp;rdquo; as the registered OAuth2 client application&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Requested Scopes&lt;/strong&gt;: The specific data and permissions that WoT (as the OAuth2 client) will have access to on behalf
-of the user&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Important Clarification&lt;/strong&gt;: Google&amp;rsquo;s consent screen does &lt;strong&gt;not&lt;/strong&gt; include information about the Organization or Agent
-mentioned in the WoT Enhanced Consent Screen. From Google&amp;rsquo;s perspective, WoT itself is the OAuth2 client requesting
-access. Google has no knowledge of the downstream organizations and autonomous agents that WoT represents. This is a
-fundamental aspect of WoT&amp;rsquo;s role as a trusted intermediary—WoT obtains consent from the data provider (Google) while
-separately managing and enforcing the user&amp;rsquo;s granular consent for specific organizations and agents.&lt;/p&gt;
-&lt;h3&gt;Pending in this Flow&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;pending-in-this-flow&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#pending-in-this-flow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The demonstration concludes after the user completes Google&amp;rsquo;s consent screen. In the full production flow, additional
-steps would follow including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Token exchange and validation&lt;/li&gt;
-&lt;li&gt;Cryptographic binding of consent to the user&amp;rsquo;s identity&lt;/li&gt;
-&lt;li&gt;Storage of consent attestations&lt;/li&gt;
-&lt;li&gt;Agent authentication and data access&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Code: Structure and Architecture&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;code-structure-and-architecture&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#code-structure-and-architecture&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The backend implementation of this demonstration follows a highly modular, layered architecture as illustrated below:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_identity_op_authorize_data_access_black-white-gray.png&#34; alt=&#34;Code Structure&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;h3&gt;Modular Component Hierarchy&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;modular-component-hierarchy&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#modular-component-hierarchy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The WoT Identity Subsystem implements the data access authorization workflow through a hierarchical structure of
-components, each with clearly defined responsibilities:&lt;/p&gt;
-&lt;h4&gt;API Handlers&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;api-handlers&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#api-handlers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Entry points that receive HTTP requests from the WoT Portal frontend. The &lt;strong&gt;Identity API Handler&lt;/strong&gt; parses incoming
-requests, extracts parameters, and delegates business logic execution to the appropriate Operation.&lt;/p&gt;
-&lt;h4&gt;Operations&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;operations&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#operations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;High-level business logic coordinators implemented as standalone Rust library crates. The &lt;strong&gt;Authorize Data Access
-Operation&lt;/strong&gt; exposes methods that express business capabilities:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;serve_get_authorization_options()&lt;/code&gt;: Provides the authorization options for the consent screen&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;serve_authorization_callback()&lt;/code&gt;: Handles the callback from the Identity Provider after user consent&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Operations define &lt;strong&gt;what&lt;/strong&gt; the system does from a business perspective and orchestrate the execution of Assemblies to
-achieve these goals.&lt;/p&gt;
-&lt;h4&gt;Assemblies&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;assemblies&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#assemblies&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Workflow orchestrators implemented as independent Rust library crates. Each Assembly implements a specific workflow by
-coordinating a sequence of Tasks. For example:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Authorization Options Assembly&lt;/strong&gt;: Orchestrates the tasks needed to build authorization request parameters&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Authorization Callback Assembly&lt;/strong&gt;: Orchestrates the tasks needed to process the authorization callback&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Assemblies define &lt;strong&gt;how&lt;/strong&gt; a specific workflow is achieved.&lt;/p&gt;
-&lt;h4&gt;Tasks&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;tasks&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#tasks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Granular, single-responsibility units of work implemented within Assemblies. Tasks implement granular logic such as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Constant Authz Options Accessor&lt;/strong&gt;: Retrieves constant authorization configuration (e.g., OAuth2 client_id, provider
-endpoints)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Transient Authz Options Builder&lt;/strong&gt;: Constructs dynamic authorization parameters (e.g., PKCE challenge, state
-parameter, nonce)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Tasks execute independently, following the Blackboard architectural pattern. This design enables:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Loose coupling&lt;/strong&gt;: Tasks don&amp;rsquo;t depend on each other directly&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Flexibility&lt;/strong&gt;: Task execution order can be adjusted&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reusability&lt;/strong&gt;: Tasks can be shared across multiple Assemblies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Clean Architecture Principles&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;clean-architecture-principles&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#clean-architecture-principles&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The implementation strictly adheres to Clean Architecture principles by organizing code into three distinct layers with
-unidirectional dependencies:&lt;/p&gt;
-&lt;h4&gt;Domain Layer&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;domain-layer&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#domain-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Contains pure business logic with no external dependencies:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Business entities (e.g., &lt;code&gt;AuthorizationOptions&lt;/code&gt;, &lt;code&gt;ConsentGrant&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Value objects representing domain concepts&lt;/li&gt;
-&lt;li&gt;Domain services implementing core business rules&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Domain layer has &lt;strong&gt;zero dependencies&lt;/strong&gt; on infrastructure, frameworks, or external systems.&lt;/p&gt;
-&lt;h4&gt;Application Layer&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;application-layer&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#application-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Contains application-specific business logic and workflow orchestration:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Operations&lt;/strong&gt;: Use case coordinators that define business capabilities&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Assemblies&lt;/strong&gt;: Workflow implementations that orchestrate tasks&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tasks&lt;/strong&gt;: Granular work units with single responsibilities&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Application layer depends &lt;strong&gt;only on the Domain layer&lt;/strong&gt;, ensuring business logic remains independent of
-infrastructure concerns.&lt;/p&gt;
-&lt;h4&gt;Infrastructure Layer&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;infrastructure-layer&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#infrastructure-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Contains framework integration and external system interfaces:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Servers&lt;/strong&gt;: Web server configuration and routing&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Configuration&lt;/strong&gt;: External configuration file loading&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;API Handlers&lt;/strong&gt;: HTTP request/response handling using the Axum framework&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Infrastructure layer depends on both the Application and Domain layers but is isolated from business logic. Changes
-to web frameworks, databases, or external services are confined to this layer.&lt;/p&gt;
-&lt;h4&gt;Composition Root&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;composition-root&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#composition-root&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;A special component that wires all layers together through dependency injection:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Dependency Injection&lt;/strong&gt;: Inject Assemblies into Operations at application startup&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Factories&lt;/strong&gt;: Create concrete Assembly implementations based on configuration&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AppState Creation&lt;/strong&gt;: Compose the application state with fully-wired, ready-to-use Operations&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Composition Root is the &lt;strong&gt;only component&lt;/strong&gt; that knows about concrete implementations, enabling true plug-and-play
-modularity throughout the system.&lt;/p&gt;
-&lt;h3&gt;Benefits of This Architecture&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;benefits-of-this-architecture&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#benefits-of-this-architecture&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The modular, layered architecture provides several key benefits:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Modularity&lt;/strong&gt;: Each Operation, Assembly, and Task is an independent Rust crate that can be developed, tested, and
-deployed separately&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Replaceability&lt;/strong&gt;: Assemblies can be swapped without modifying Operations or other Assemblies, enabling A/B testing
-and gradual rollouts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reusability&lt;/strong&gt;: Tasks can be shared across multiple Assemblies, reducing code duplication and ensuring consistent
-behavior&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Testability&lt;/strong&gt;: Each layer can be tested in isolation with clean dependency boundaries and mock-friendly interfaces&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Maintainability&lt;/strong&gt;: Clear separation of concerns makes the codebase easier to understand, modify, and debug&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Extensibility&lt;/strong&gt;: New features can be added without modifying existing code, following the Open/Closed Principle&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This architectural approach ensures the WoT system can evolve to meet changing requirements while maintaining stability,
-security, and code quality.&lt;/p&gt;
-&lt;h2&gt;Conclusion&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;conclusion&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#conclusion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This demonstration illustrates Web of Trust&amp;rsquo;s approach to extending traditional OAuth2/OIDC protocols to support
-transparent, granular consent for autonomous agent data access. By introducing an Enhanced Consent Screen that discloses
-organizations, agents, data providers, and identity providers, WoT empowers users with the information needed to make
-informed authorization decisions.&lt;/p&gt;
-&lt;p&gt;The implementation showcases a production-ready architecture built on Clean Architecture principles, with clear
-separation between domain logic, application workflows, and infrastructure concerns. The modular design—with API
-Handlers relying on Operations, Operations coordinating Assemblies, and Assemblies orchestrating Tasks—ensures the
-system can evolve and scale while maintaining code quality and architectural integrity.&lt;/p&gt;
-&lt;p&gt;As the WoT system continues to develop, future enhancements will include cryptographic proof of consent, completion of
-the full authorization workflow including token exchange and validation, and integration with additional identity and
-data providers beyond Google. These additions will build upon the solid architectural foundation demonstrated here,
-reinforcing WoT&amp;rsquo;s role as a trusted intermediary for secure, transparent autonomous operations.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>One-Pager — Web of Trust</title>
       <link>https://bitscrafter.com/products/one_pager_web_of_trust/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -572,6 +352,225 @@ authorization, and retrieve data from Data Providers, all mediated by WoT&amp;rs
 &lt;/ul&gt;
 &lt;p&gt;WoT orchestrates interactions between these entities, ensuring that trust established in external systems flows through
 relationship formation and granular consent to secure data access decisions within the trusted web.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Demo Data Access Consent — Web of Trust</title>
+      <link>https://bitscrafter.com/products/demo_data_access_consent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bitscrafter.com/products/demo_data_access_consent/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/logo.png&#34; alt=&#34;logo&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_banner_demo_data_access_consent.png&#34; alt=&#34;Banner&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;
+    &lt;img src=&#34;https://bitscrafter.com/images/products/wot/patent-certificate_48x48.png&#34; title=&#34;Patent Pending&#34; alt=&#34;Patent Pending&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;figcaption&gt;Patent Pending&lt;/figcaption&gt;
+  &lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;Web of Trust: Data Access Consent Demo&lt;/h1&gt;&lt;h2&gt;Introduction&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;introduction&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#introduction&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This article presents a demonstration of the Web of Trust (WoT) system&amp;rsquo;s Enhanced Consent mechanism for granting data
+access to autonomous agents. The demo showcases how WoT acts as a trusted intermediary, extending traditional
+OAuth2/OIDC identity standards to provide users with granular, transparent control over which organizations and their
+autonomous agents can access their data from third-party providers.&lt;/p&gt;
+&lt;p&gt;Unlike standard OAuth2 consent flows where only the client application is disclosed, WoT&amp;rsquo;s Enhanced Consent Screen
+explicitly presents the Organization, the specific Agent (autonomous entity), the Data Provider, and the Identity
+Provider involved in the data access request. This transparency enables users to make informed decisions about granting
+access while WoT maintains cryptographic accountability for all data access operations.&lt;/p&gt;
+&lt;h2&gt;Context: Where This Demo Fits in Web of Trust&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;context-where-this-demo-fits-in-web-of-trust&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#context-where-this-demo-fits-in-web-of-trust&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The Web of Trust system provides a comprehensive framework for managing trust relationships, identity verification,
+consent, and data access across organizations, users, and autonomous entities. The following diagram illustrates the
+four foundational use cases of WoT:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_functional_roles_black-white-gray.png&#34; alt=&#34;WoT Functional Roles&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The demo presented in this article focuses specifically on &lt;strong&gt;Use Case #3: User Granting Data Access&lt;/strong&gt;, which represents
+a critical interaction point where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Use Case #1 - Establishing Trust&lt;/strong&gt;: Trust anchors (organizations, identity verification providers) have already been
+established within the WoT ecosystem&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use Case #2 - Registering Trusted Entities&lt;/strong&gt;: Organizations and their autonomous agents have been registered as
+trusted entities within WoT&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use Case #3 - User Granting Data Access&lt;/strong&gt; (This Demo): Users grant explicit, granular consent for registered agents
+to access their data from third-party providers like Google&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use Case #4 - Agent Accessing Data&lt;/strong&gt;: Authorized agents subsequently access user data in accordance with the granted
+consent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This demonstration illustrates the consent workflow that bridges user authorization with autonomous agent data access,
+showing how WoT extends traditional identity protocols to support the unique requirements of autonomous operations.&lt;/p&gt;
+&lt;h2&gt;Demo: Participants&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;demo-participants&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#demo-participants&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The demonstration involves four key participants working together to enable the enhanced consent flow:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_data_access_black-white-gray.png&#34; alt=&#34;Demo Flow&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;User with Browser&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;user-with-browser&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#user-with-browser&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The end user accessing the WoT Portal through a web browser. The user initiates the data access consent process and
+makes decisions about which data to share with which organizations and agents.&lt;/p&gt;
+&lt;h3&gt;WoT Portal (React Frontend)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;wot-portal-react-frontend&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#wot-portal-react-frontend&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A web-based frontend application built with React that provides the user interface for the Web of Trust system. The
+portal presents the Enhanced Consent Screen and manages the user&amp;rsquo;s interaction with the consent flow.&lt;/p&gt;
+&lt;h3&gt;Identity Subsystem (Rust Backend)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;identity-subsystem-rust-backend&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#identity-subsystem-rust-backend&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The WoT backend service implemented in Rust that orchestrates the authorization workflow. It serves the authorization
+options, manages the consent process, and coordinates with external identity and data providers. The Identity Subsystem
+implements the core business logic for data access authorization following Clean Architecture principles.&lt;/p&gt;
+&lt;h3&gt;Google Authorization Service (OAuth2/OIDC)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;google-authorization-service-oauth2oidc&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#google-authorization-service-oauth2oidc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Google&amp;rsquo;s standard OAuth2 and OpenID Connect authorization service, which acts as both the Identity Provider (IdP) and
+Data Provider for this demonstration. Google authenticates the user and manages consent for WoT (as an OAuth2 client) to
+access the user&amp;rsquo;s Google data.&lt;/p&gt;
+&lt;h2&gt;Demo: Video&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;demo-video&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#demo-video&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class=&#34;hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose&#34; style=&#34;--hextra-cards-grid-cols: 1;&#34;&gt; &lt;a
+   class=&#34;hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900&#34;&gt;&lt;span class=&#34;hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-pt-4 hx-px-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z&#34;/&gt;&lt;/svg&gt;WoT Demo - Data Access Consent&lt;/span&gt;&lt;div class=&#34;hextra-card-subtitle hx-line-clamp-3 hx-text-sm hx-font-normal hx-text-gray-500 dark:hx-text-gray-400 hx-px-4 hx-mb-4 hx-mt-2&#34;&gt;&lt;br/&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/59ok0OGL3hs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+     &lt;/div&gt;
+ &lt;br/&gt;Data Access Consent Demo&lt;/div&gt;&lt;/a&gt; &lt;/div&gt;
+
+&lt;h2&gt;Demo: Walkthrough&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;demo-walkthrough&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#demo-walkthrough&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The demonstration showcases the complete flow of the enhanced consent process:&lt;/p&gt;
+&lt;h3&gt;1. Sign-In Initiation&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-sign-in-initiation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-sign-in-initiation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The user navigates to the WoT Portal landing page and clicks the &amp;ldquo;Sign In with Google&amp;rdquo; button to initiate the data
+access consent flow.&lt;/p&gt;
+&lt;h3&gt;2. Enhanced Consent Screen (WoT Layer)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-enhanced-consent-screen-wot-layer&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-enhanced-consent-screen-wot-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After clicking the sign-in button, the user is immediately presented with WoT&amp;rsquo;s Enhanced Consent Screen. This screen
+provides comprehensive transparency about the data access request by displaying:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Organization&lt;/strong&gt;: The organization requesting data access on behalf of its autonomous agent&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agent/Application&lt;/strong&gt;: The specific autonomous agent or application that will access the data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Provider&lt;/strong&gt;: Google (in this demo), indicating where the data resides&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Identity Provider&lt;/strong&gt;: Google (in this demo), confirming who will authenticate the user&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Types&lt;/strong&gt;: A detailed list of data types being requested (e.g., email, profile information, calendar access),
+with user-selectable checkboxes allowing granular control over which data types to grant access to&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WoT Intermediary Disclaimer&lt;/strong&gt;: A clear message explaining that Web of Trust acts as a trusted intermediary and will
+facilitate access to the data strictly in accordance with the granted consent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This Enhanced Consent Screen is a WoT-specific addition to the standard OAuth2 flow, providing users with critical
+context about the autonomous operations and organizational relationships involved in the data access request.&lt;/p&gt;
+&lt;h3&gt;3. Google Consent Screen (IdP Layer)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-google-consent-screen-idp-layer&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-google-consent-screen-idp-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;After accepting the WoT Enhanced Consent, the user is redirected to Google&amp;rsquo;s standard OAuth2 consent screen. This screen
+displays:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OAuth2 Client&lt;/strong&gt;: &amp;ldquo;Web of Trust&amp;rdquo; as the registered OAuth2 client application&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Requested Scopes&lt;/strong&gt;: The specific data and permissions that WoT (as the OAuth2 client) will have access to on behalf
+of the user&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Important Clarification&lt;/strong&gt;: Google&amp;rsquo;s consent screen does &lt;strong&gt;not&lt;/strong&gt; include information about the Organization or Agent
+mentioned in the WoT Enhanced Consent Screen. From Google&amp;rsquo;s perspective, WoT itself is the OAuth2 client requesting
+access. Google has no knowledge of the downstream organizations and autonomous agents that WoT represents. This is a
+fundamental aspect of WoT&amp;rsquo;s role as a trusted intermediary—WoT obtains consent from the data provider (Google) while
+separately managing and enforcing the user&amp;rsquo;s granular consent for specific organizations and agents.&lt;/p&gt;
+&lt;h3&gt;Pending in this Flow&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;pending-in-this-flow&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#pending-in-this-flow&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The demonstration concludes after the user completes Google&amp;rsquo;s consent screen. In the full production flow, additional
+steps would follow including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Token exchange and validation&lt;/li&gt;
+&lt;li&gt;Cryptographic binding of consent to the user&amp;rsquo;s identity&lt;/li&gt;
+&lt;li&gt;Storage of consent attestations&lt;/li&gt;
+&lt;li&gt;Agent authentication and data access&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Code: Structure and Architecture&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;code-structure-and-architecture&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#code-structure-and-architecture&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The backend implementation of this demonstration follows a highly modular, layered architecture as illustrated below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bitscrafter.com/images/products/wot/wot_identity_op_authorize_data_access_black-white-gray.png&#34; alt=&#34;Code Structure&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;Modular Component Hierarchy&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;modular-component-hierarchy&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#modular-component-hierarchy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The WoT Identity Subsystem implements the data access authorization workflow through a hierarchical structure of
+components, each with clearly defined responsibilities:&lt;/p&gt;
+&lt;h4&gt;API Handlers&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;api-handlers&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#api-handlers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Entry points that receive HTTP requests from the WoT Portal frontend. The &lt;strong&gt;Identity API Handler&lt;/strong&gt; parses incoming
+requests, extracts parameters, and delegates business logic execution to the appropriate Operation.&lt;/p&gt;
+&lt;h4&gt;Operations&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;operations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#operations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;High-level business logic coordinators implemented as standalone Rust library crates. The &lt;strong&gt;Authorize Data Access
+Operation&lt;/strong&gt; exposes methods that express business capabilities:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;serve_get_authorization_options()&lt;/code&gt;: Provides the authorization options for the consent screen&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;serve_authorization_callback()&lt;/code&gt;: Handles the callback from the Identity Provider after user consent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Operations define &lt;strong&gt;what&lt;/strong&gt; the system does from a business perspective and orchestrate the execution of Assemblies to
+achieve these goals.&lt;/p&gt;
+&lt;h4&gt;Assemblies&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;assemblies&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#assemblies&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Workflow orchestrators implemented as independent Rust library crates. Each Assembly implements a specific workflow by
+coordinating a sequence of Tasks. For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Authorization Options Assembly&lt;/strong&gt;: Orchestrates the tasks needed to build authorization request parameters&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Authorization Callback Assembly&lt;/strong&gt;: Orchestrates the tasks needed to process the authorization callback&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assemblies define &lt;strong&gt;how&lt;/strong&gt; a specific workflow is achieved.&lt;/p&gt;
+&lt;h4&gt;Tasks&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;tasks&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#tasks&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Granular, single-responsibility units of work implemented within Assemblies. Tasks implement granular logic such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Constant Authz Options Accessor&lt;/strong&gt;: Retrieves constant authorization configuration (e.g., OAuth2 client_id, provider
+endpoints)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transient Authz Options Builder&lt;/strong&gt;: Constructs dynamic authorization parameters (e.g., PKCE challenge, state
+parameter, nonce)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tasks execute independently, following the Blackboard architectural pattern. This design enables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Loose coupling&lt;/strong&gt;: Tasks don&amp;rsquo;t depend on each other directly&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flexibility&lt;/strong&gt;: Task execution order can be adjusted&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusability&lt;/strong&gt;: Tasks can be shared across multiple Assemblies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Clean Architecture Principles&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;clean-architecture-principles&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#clean-architecture-principles&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The implementation strictly adheres to Clean Architecture principles by organizing code into three distinct layers with
+unidirectional dependencies:&lt;/p&gt;
+&lt;h4&gt;Domain Layer&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;domain-layer&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#domain-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Contains pure business logic with no external dependencies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Business entities (e.g., &lt;code&gt;AuthorizationOptions&lt;/code&gt;, &lt;code&gt;ConsentGrant&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Value objects representing domain concepts&lt;/li&gt;
+&lt;li&gt;Domain services implementing core business rules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Domain layer has &lt;strong&gt;zero dependencies&lt;/strong&gt; on infrastructure, frameworks, or external systems.&lt;/p&gt;
+&lt;h4&gt;Application Layer&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;application-layer&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#application-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Contains application-specific business logic and workflow orchestration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Operations&lt;/strong&gt;: Use case coordinators that define business capabilities&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Assemblies&lt;/strong&gt;: Workflow implementations that orchestrate tasks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tasks&lt;/strong&gt;: Granular work units with single responsibilities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Application layer depends &lt;strong&gt;only on the Domain layer&lt;/strong&gt;, ensuring business logic remains independent of
+infrastructure concerns.&lt;/p&gt;
+&lt;h4&gt;Infrastructure Layer&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;infrastructure-layer&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#infrastructure-layer&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Contains framework integration and external system interfaces:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Servers&lt;/strong&gt;: Web server configuration and routing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Configuration&lt;/strong&gt;: External configuration file loading&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API Handlers&lt;/strong&gt;: HTTP request/response handling using the Axum framework&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Infrastructure layer depends on both the Application and Domain layers but is isolated from business logic. Changes
+to web frameworks, databases, or external services are confined to this layer.&lt;/p&gt;
+&lt;h4&gt;Composition Root&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;composition-root&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#composition-root&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;A special component that wires all layers together through dependency injection:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dependency Injection&lt;/strong&gt;: Inject Assemblies into Operations at application startup&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Factories&lt;/strong&gt;: Create concrete Assembly implementations based on configuration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AppState Creation&lt;/strong&gt;: Compose the application state with fully-wired, ready-to-use Operations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Composition Root is the &lt;strong&gt;only component&lt;/strong&gt; that knows about concrete implementations, enabling true plug-and-play
+modularity throughout the system.&lt;/p&gt;
+&lt;h3&gt;Benefits of This Architecture&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;benefits-of-this-architecture&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#benefits-of-this-architecture&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The modular, layered architecture provides several key benefits:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Modularity&lt;/strong&gt;: Each Operation, Assembly, and Task is an independent Rust crate that can be developed, tested, and
+deployed separately&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Replaceability&lt;/strong&gt;: Assemblies can be swapped without modifying Operations or other Assemblies, enabling A/B testing
+and gradual rollouts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusability&lt;/strong&gt;: Tasks can be shared across multiple Assemblies, reducing code duplication and ensuring consistent
+behavior&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Testability&lt;/strong&gt;: Each layer can be tested in isolation with clean dependency boundaries and mock-friendly interfaces&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Maintainability&lt;/strong&gt;: Clear separation of concerns makes the codebase easier to understand, modify, and debug&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Extensibility&lt;/strong&gt;: New features can be added without modifying existing code, following the Open/Closed Principle&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This architectural approach ensures the WoT system can evolve to meet changing requirements while maintaining stability,
+security, and code quality.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;conclusion&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#conclusion&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This demonstration illustrates Web of Trust&amp;rsquo;s approach to extending traditional OAuth2/OIDC protocols to support
+transparent, granular consent for autonomous agent data access. By introducing an Enhanced Consent Screen that discloses
+organizations, agents, data providers, and identity providers, WoT empowers users with the information needed to make
+informed authorization decisions.&lt;/p&gt;
+&lt;p&gt;The implementation showcases a production-ready architecture built on Clean Architecture principles, with clear
+separation between domain logic, application workflows, and infrastructure concerns. The modular design—with API
+Handlers relying on Operations, Operations coordinating Assemblies, and Assemblies orchestrating Tasks—ensures the
+system can evolve and scale while maintaining code quality and architectural integrity.&lt;/p&gt;
+&lt;p&gt;As the WoT system continues to develop, future enhancements will include cryptographic proof of consent, completion of
+the full authorization workflow including token exchange and validation, and integration with additional identity and
+data providers beyond Google. These additions will build upon the solid architectural foundation demonstrated here,
+reinforcing WoT&amp;rsquo;s role as a trusted intermediary for secure, transparent autonomous operations.&lt;/p&gt;
 
       </description>
     </item>
